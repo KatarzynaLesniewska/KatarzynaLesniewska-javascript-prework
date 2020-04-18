@@ -28,9 +28,9 @@
             if (argPlayerMove == argComputerMove) {
                 printMessage('REMIS!');
             } else if (
-                (argPlayerMove == 'kamien' && argComputerMove == 'nożyce')
+                (argPlayerMove == 'kamień' && argComputerMove == 'nożyce')
                 ||
-                (argPlayerMove == 'papier' && argComputerMove == 'kamien')
+                (argPlayerMove == 'papier' && argComputerMove == 'kamień')
                 ||
                 (argPlayerMove == 'nożyce' && argComputerMove == 'papier')
             ) {
@@ -41,22 +41,22 @@
             }
         }
 
-        let randomNumber = Math.floor(Math.random() * 3 + 1);
+        const randomNumber = Math.floor(Math.random() * 3 + 1);
 
         console.log('Wylosowana liczba to: ' + randomNumber);
         console.log('Wylosowana liczba to: ', randomNumber);
 
-        let computerMove = getMoveName(randomNumber);
+        const computerMove = getMoveName(randomNumber);
 
         printMessage('Mój ruch to: ' + computerMove);
 
-        let playerMove = getMoveName(playerInput);
+        const playerMove = getMoveName(playerInput);
 
         console.log(getMoveName('2')); // czy to tu ma być ? ; 
 
         console.log('Gracz wpisał: ' + playerMove);
 
-        displayResult(argComputerMove, argPlayerMove)
+        displayResult(computerMove, playerMove)
     }
 
     document.getElementById('play-rock').addEventListener('click', function () {
